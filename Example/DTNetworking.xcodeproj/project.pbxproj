@@ -34,7 +34,7 @@
 /* Begin PBXFileReference section */
 		0570513D8A6F7B8FD7517B29 /* Pods_DTNetworking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DTNetworking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240C71B6B4E97B26B7B5ABE9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		2717136E5CB638A78E6F9079 /* DTNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DTNetworking.podspec; path = ../DTNetworking.podspec; sourceTree = "<group>"; };
+		2717136E5CB638A78E6F9079 /* DTNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DTNetworking.podspec; path = ../DTNetworking.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2E9066B2457C7D237861D93C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		499F9FDF8732D5FB52A83031 /* Pods-DTNetworking_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DTNetworking_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DTNetworking_Tests/Pods-DTNetworking_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DTNetworking_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTNetworking_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
