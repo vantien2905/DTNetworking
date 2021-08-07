@@ -21,7 +21,7 @@ s.description      = <<-DESC
 TODO: Add base networking.
 DESC
 
-s.homepage         = 'https://github.com/vantien2905/DTNetworking'
+s.homepage         = { :git => 'https://github.com/vantien2905/DTNetworking.git', :branch => "master", :tag => s.version.to_s }
 # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'vantien2905' => 'vantien2905@gmail.com' }
