@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (4.9.1)
+  - DTNetworking (0.1.0):
+    - Alamofire (= 4.9.1)
+    - ObjectMapper (= 3.3.0)
+    - ReachabilitySwift
+    - RealmSwift
+    - SwiftyJSON (= 4.2.0)
+    - Toast-Swift
+  - ObjectMapper (3.3.0)
+  - ReachabilitySwift (5.0.0)
+  - Realm (10.12.0):
+    - Realm/Headers (= 10.12.0)
+  - Realm/Headers (10.12.0)
+  - RealmSwift (10.12.0):
+    - Realm (= 10.12.0)
+  - SwiftyJSON (4.2.0)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - DTNetworking (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ObjectMapper
+    - ReachabilitySwift
+    - Realm
+    - RealmSwift
+    - SwiftyJSON
+    - Toast-Swift
+
+EXTERNAL SOURCES:
+  DTNetworking:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  DTNetworking: 16c6cf43e0c0bf9ca245deba264fa6c86d48527b
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Realm: 32488213acb44660539c619d620cec1bac046166
+  RealmSwift: 0abdca6231d5ff8a4f84cef9c1121ef95a483faf
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 2cf64d540be562ae9fc1ee0809bda4b4b430439e
+
+COCOAPODS: 1.10.2
