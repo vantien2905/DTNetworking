@@ -48,17 +48,19 @@ public struct NetworkRequest: NetworkRequestProtocol {
         if let baseUrl = endPoint.baseURL {
             url = baseUrl.appendingPathComponent(endPoint.path)
         } else {
+            url = URL(string: endPoint.path)!
             print("Base URL Empty")
         }
         
         let encoding = getAlamofireEncoding(httpMethod: endPoint.httpMethod)
         
-        let request = Alamofire.request(url,
-                                        method      : endPoint.httpMethod,
-                                        parameters  : endPoint.parameters,
-                                        encoding    : encoding,
-                                        headers     : endPoint.headers)
-        debugPrint(request)
+        let request = AF.request(url,
+                                method      : endPoint.httpMethod,
+                                parameters  : endPoint.parameters,
+                                encoding    : encoding,
+                                 headers     : endPoint.headers).cURLDescription { curl in
+            print(curl)
+        }
         request.responseData { (dataResponse) in
             switch dataResponse.result {
             case .success(let data):

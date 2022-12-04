@@ -21,8 +21,8 @@ public struct DefaultHeader {
     public init () {
         
     }
-    public func addAuthHeader() -> [String: String] {
-        let header: [String: String] = ["Content-Type": "application/json"]
+    public func addAuthHeader() -> [HTTPHeader] {
+        let header: [HTTPHeader] = [HTTPHeader(name: "Content-Type", value: "application/json")]
         return header
     }
 }

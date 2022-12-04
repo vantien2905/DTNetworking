@@ -34,11 +34,17 @@ public struct APINetwork: APINetworkProtocol {
                      failure: @escaping RequestFailure) {
         request.requestData(endPoint: endPoint, success: { data in
             let json = JSON(data)
-            guard let result = Mapper<BaseResponse>().map(JSONObject: json.dictionaryObject) else {
-                failure(APPError.canNotParseData)
-                return
+            if let result = Mapper<BaseResponse>().map(JSONObject: json.dictionaryObject) {
+                if result.data == nil && result.message == nil && result.status == nil {
+                    let response = BaseResponse(data: json.rawValue)
+                    success(response)
+                } else {
+                    handleResponse(response: result, success: success, failure: failure)
+                }
+            } else {
+                let response = BaseResponse(data: json.rawValue)
+                success(response)
             }
-            self.handleResponse(response: result, success: success, failure: failure)
         }) { error in
             failure(APIError(error: error))
         }

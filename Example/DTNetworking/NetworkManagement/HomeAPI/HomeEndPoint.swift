@@ -10,18 +10,21 @@ import Alamofire
 import DTNetworking
 
 enum HomeEndPoint {
-    case getListCoint
+    case getUniversities(country: String)
+    case getEntries
 }
 
 extension HomeEndPoint: EndPointType {
     var baseURL: URL? {
-        return URL(string: "https://www.coinhako.com/api/v3")
+        return URL(string: "")
     }
     
     var path: String {
         switch self {
-        case .getListCoint:
-            return "/price/all_prices_for_mobile?counter_currency=USD"
+        case .getUniversities:
+            return "http://universities.hipolabs.com/search"
+        case .getEntries:
+            return "https://api.publicapis.org/entries"
         }
     }
     
@@ -34,13 +37,15 @@ extension HomeEndPoint: EndPointType {
     
     var parameters: Parameters {
         switch self {
-        case .getListCoint:
+        case .getUniversities(let country):
+            return ["country": country]
+        case .getEntries:
             return [:]
         }
     }
     
     var headers: HTTPHeaders? {
-        return DefaultHeader().addAuthHeader()
+        return HTTPHeaders(DefaultHeader().addAuthHeader())
     }
 }
 
