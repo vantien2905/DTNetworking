@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         Provider.shared.homeAPIService.getUniversities(country: "Viet Nam", success: { data in
             data.forEach { item in
-                print(item.name ?? "")
+                print(item.name ?? "Empty")
             }
         }, failure: { error in
             print(error)
